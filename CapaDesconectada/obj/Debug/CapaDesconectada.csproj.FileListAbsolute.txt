@@ -8,3 +8,6 @@ C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\obj
 C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\obj\Debug\CapaDesconectada.csproj.CoreCompileInputs.cache
 C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\obj\Debug\CapaDesconectada.exe
 C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\obj\Debug\CapaDesconectada.pdb
+C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\bin\Debug\AccesoDatos.dll
+C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\bin\Debug\AccesoDatos.pdb
+C:\Users\everc\OneDrive\Documentos\progra2\CapaDesconectada\CapaDesconectada\obj\Debug\CapaDesc.ABCBD388.Up2Date
