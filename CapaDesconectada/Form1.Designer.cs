@@ -35,11 +35,11 @@
             this.btnObtenerNotipado = new System.Windows.Forms.Button();
             this.gridNotipado = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnObtenerTipado = new System.Windows.Forms.Button();
-            this.gridTipado = new System.Windows.Forms.DataGridView();
             this.btnBuscarTipado = new System.Windows.Forms.Button();
             this.tboxBuscarTipado = new System.Windows.Forms.TextBox();
+            this.btnObtenerTipado = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.gridTipado = new System.Windows.Forms.DataGridView();
             this.tboxCustomerID = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.tboxCompaniName = new System.Windows.Forms.TextBox();
@@ -51,6 +51,7 @@
             this.tboxAddres = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btonInsertarCliente = new System.Windows.Forms.Button();
+            this.btnInsertarT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNotipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -118,6 +119,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnInsertarT);
             this.groupBox2.Controls.Add(this.btnBuscarTipado);
             this.groupBox2.Controls.Add(this.tboxBuscarTipado);
             this.groupBox2.Controls.Add(this.btnObtenerTipado);
@@ -125,34 +127,16 @@
             this.groupBox2.Controls.Add(this.gridTipado);
             this.groupBox2.Location = new System.Drawing.Point(428, 12);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(337, 459);
+            this.groupBox2.Size = new System.Drawing.Size(337, 518);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DataSet Tipado";
-            // 
-            // btnObtenerTipado
-            // 
-            this.btnObtenerTipado.Location = new System.Drawing.Point(-6, 300);
-            this.btnObtenerTipado.Name = "btnObtenerTipado";
-            this.btnObtenerTipado.Size = new System.Drawing.Size(337, 49);
-            this.btnObtenerTipado.TabIndex = 2;
-            this.btnObtenerTipado.Text = "obtener dato tipado";
-            this.btnObtenerTipado.UseVisualStyleBackColor = true;
-            this.btnObtenerTipado.Click += new System.EventHandler(this.btnObtenerTipado_Click);
-            // 
-            // gridTipado
-            // 
-            this.gridTipado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridTipado.Location = new System.Drawing.Point(0, 48);
-            this.gridTipado.Name = "gridTipado";
-            this.gridTipado.Size = new System.Drawing.Size(337, 220);
-            this.gridTipado.TabIndex = 1;
             // 
             // btnBuscarTipado
             // 
             this.btnBuscarTipado.Location = new System.Drawing.Point(42, 418);
             this.btnBuscarTipado.Name = "btnBuscarTipado";
-            this.btnBuscarTipado.Size = new System.Drawing.Size(264, 35);
+            this.btnBuscarTipado.Size = new System.Drawing.Size(83, 35);
             this.btnBuscarTipado.TabIndex = 8;
             this.btnBuscarTipado.Text = "Enviar";
             this.btnBuscarTipado.UseVisualStyleBackColor = true;
@@ -165,6 +149,16 @@
             this.tboxBuscarTipado.Size = new System.Drawing.Size(216, 20);
             this.tboxBuscarTipado.TabIndex = 7;
             // 
+            // btnObtenerTipado
+            // 
+            this.btnObtenerTipado.Location = new System.Drawing.Point(-6, 300);
+            this.btnObtenerTipado.Name = "btnObtenerTipado";
+            this.btnObtenerTipado.Size = new System.Drawing.Size(337, 49);
+            this.btnObtenerTipado.TabIndex = 2;
+            this.btnObtenerTipado.Text = "obtener dato tipado";
+            this.btnObtenerTipado.UseVisualStyleBackColor = true;
+            this.btnObtenerTipado.Click += new System.EventHandler(this.btnObtenerTipado_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -173,6 +167,14 @@
             this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Customer ID ";
+            // 
+            // gridTipado
+            // 
+            this.gridTipado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridTipado.Location = new System.Drawing.Point(0, 48);
+            this.gridTipado.Name = "gridTipado";
+            this.gridTipado.Size = new System.Drawing.Size(337, 220);
+            this.gridTipado.TabIndex = 1;
             // 
             // tboxCustomerID
             // 
@@ -265,6 +267,16 @@
             this.btonInsertarCliente.UseVisualStyleBackColor = true;
             this.btonInsertarCliente.Click += new System.EventHandler(this.btonInsertarCliente_Click);
             // 
+            // btnInsertarT
+            // 
+            this.btnInsertarT.Location = new System.Drawing.Point(223, 424);
+            this.btnInsertarT.Name = "btnInsertarT";
+            this.btnInsertarT.Size = new System.Drawing.Size(83, 35);
+            this.btnInsertarT.TabIndex = 6;
+            this.btnInsertarT.Text = "Enviar";
+            this.btnInsertarT.UseVisualStyleBackColor = true;
+            this.btnInsertarT.Click += new System.EventHandler(this.btnInsertarT_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +333,7 @@
         private System.Windows.Forms.TextBox tboxAddres;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btonInsertarCliente;
+        private System.Windows.Forms.Button btnInsertarT;
     }
 }
 
