@@ -104,16 +104,43 @@ namespace AccesoDatos
                 InsertarporId = InsertarporId + "           ,@Address)";
 
                 using (var commando = new SqlCommand(InsertarporId, conexion)) {
-                    commando.Parameters.AddWithValue("CustomerID", cliente.CustomerID);
-                    commando.Parameters.AddWithValue("CompanyName", cliente.CompanyName);
-                    commando.Parameters.AddWithValue("ContactName", cliente.ContactName);
-                    commando.Parameters.AddWithValue("ContactTitle", cliente.ContactTitle);
-                    commando.Parameters.AddWithValue("Address", cliente.Address);
-                    SqlDataAdapter adaptador = new SqlDataAdapter(commando);
-                    adaptador.InsertCommand = commando;
+                    SqlCommand comando = parametrosSqlCustomers(commando, cliente);
+                    SqlDataAdapter adaptador = new SqlDataAdapter(comando);
+                    adaptador.InsertCommand = comando;
                   return  adaptador.InsertCommand.ExecuteNonQuery();
                 }
             }
+        }
+
+        public int ActualizarCliente(Customers cliente) {
+
+            using (var conexion = DataBase.GetSqlConnection()) {
+                String updateUser = "";
+                updateUser = updateUser + "UPDATE [dbo].[Customers] " + "\n";
+                updateUser = updateUser + "   SET [CustomerID] = @CustomerID " + "\n";
+                updateUser = updateUser + "      ,[CompanyName] = @CompanyName " + "\n";
+                updateUser = updateUser + "      ,[ContactName] = @ContactName " + "\n";
+                updateUser = updateUser + "      ,[ContactTitle] = @ContactTitle " + "\n";
+                updateUser = updateUser + "      ,[Address] = @Address " + "\n";
+                updateUser = updateUser + " WHERE CustomerID = @CustomerID";
+                using (var commando = new SqlCommand(updateUser, conexion)) {
+                   SqlCommand comando = parametrosSqlCustomers(commando, cliente);
+                    SqlDataAdapter adapter = new SqlDataAdapter();
+                    adapter.UpdateCommand = comando;
+                   return adapter.UpdateCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        private SqlCommand parametrosSqlCustomers( SqlCommand comando, Customers cliente) {
+            comando.Parameters.AddWithValue("CustomerID", cliente.CustomerID);
+            comando.Parameters.AddWithValue("CompanyName", cliente.CompanyName);
+            comando.Parameters.AddWithValue("ContactName", cliente.ContactName);
+            comando.Parameters.AddWithValue("ContactTitle", cliente.ContactTitle);
+            comando.Parameters.AddWithValue("Address", cliente.Address);
+            return comando;
+
         }
     }
 

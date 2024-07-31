@@ -35,6 +35,7 @@
             this.btnObtenerNotipado = new System.Windows.Forms.Button();
             this.gridNotipado = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnInsertarT = new System.Windows.Forms.Button();
             this.btnBuscarTipado = new System.Windows.Forms.Button();
             this.tboxBuscarTipado = new System.Windows.Forms.TextBox();
             this.btnObtenerTipado = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             this.tboxAddres = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btonInsertarCliente = new System.Windows.Forms.Button();
-            this.btnInsertarT = new System.Windows.Forms.Button();
+            this.btnActualizarNT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNotipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -60,6 +61,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnActualizarNT);
             this.groupBox1.Controls.Add(this.btBuscarPorIdNt);
             this.groupBox1.Controls.Add(this.tboxObtenerNt);
             this.groupBox1.Controls.Add(this.label2);
@@ -76,7 +78,7 @@
             // 
             this.btBuscarPorIdNt.Location = new System.Drawing.Point(43, 418);
             this.btBuscarPorIdNt.Name = "btBuscarPorIdNt";
-            this.btBuscarPorIdNt.Size = new System.Drawing.Size(264, 35);
+            this.btBuscarPorIdNt.Size = new System.Drawing.Size(95, 35);
             this.btBuscarPorIdNt.TabIndex = 5;
             this.btBuscarPorIdNt.Text = "Enviar";
             this.btBuscarPorIdNt.UseVisualStyleBackColor = true;
@@ -131,6 +133,16 @@
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "DataSet Tipado";
+            // 
+            // btnInsertarT
+            // 
+            this.btnInsertarT.Location = new System.Drawing.Point(223, 424);
+            this.btnInsertarT.Name = "btnInsertarT";
+            this.btnInsertarT.Size = new System.Drawing.Size(83, 35);
+            this.btnInsertarT.TabIndex = 6;
+            this.btnInsertarT.Text = "Insertar";
+            this.btnInsertarT.UseVisualStyleBackColor = true;
+            this.btnInsertarT.Click += new System.EventHandler(this.btnInsertarT_Click);
             // 
             // btnBuscarTipado
             // 
@@ -267,15 +279,15 @@
             this.btonInsertarCliente.UseVisualStyleBackColor = true;
             this.btonInsertarCliente.Click += new System.EventHandler(this.btonInsertarCliente_Click);
             // 
-            // btnInsertarT
+            // btnActualizarNT
             // 
-            this.btnInsertarT.Location = new System.Drawing.Point(223, 424);
-            this.btnInsertarT.Name = "btnInsertarT";
-            this.btnInsertarT.Size = new System.Drawing.Size(83, 35);
-            this.btnInsertarT.TabIndex = 6;
-            this.btnInsertarT.Text = "Enviar";
-            this.btnInsertarT.UseVisualStyleBackColor = true;
-            this.btnInsertarT.Click += new System.EventHandler(this.btnInsertarT_Click);
+            this.btnActualizarNT.Location = new System.Drawing.Point(161, 418);
+            this.btnActualizarNT.Name = "btnActualizarNT";
+            this.btnActualizarNT.Size = new System.Drawing.Size(146, 35);
+            this.btnActualizarNT.TabIndex = 6;
+            this.btnActualizarNT.Text = "Actualizar";
+            this.btnActualizarNT.UseVisualStyleBackColor = true;
+            this.btnActualizarNT.Click += new System.EventHandler(this.btnActualizarNT_Click);
             // 
             // Form1
             // 
@@ -334,6 +346,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button btonInsertarCliente;
         private System.Windows.Forms.Button btnInsertarT;
+        private System.Windows.Forms.Button btnActualizarNT;
     }
 }
 
