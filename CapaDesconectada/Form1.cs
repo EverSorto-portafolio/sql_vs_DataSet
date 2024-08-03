@@ -113,31 +113,54 @@ namespace CapaDesconectada
             if (fila != null) {
                 var datoOriginal = customerRepository.ExtraerInfoCliente(fila);
                 var datosModificados = CrearCliente();
-                var filas = adaptador.Update(
-                    datosModificados.CustomerID,
-                    datosModificados.CompanyName,
-                    datosModificados.ContactName, 
-                    datosModificados.ContactTitle, 
-                    datosModificados.Address,
-                    datosModificados.City,
-                    datosModificados.Region, 
-                    datosModificados.PostalCode,  
-                    datosModificados.Country, 
-                    datosModificados.Phone, 
-                    datosModificados.Fax, 
-                    datoOriginal.CustomerID, 
-                    datoOriginal.CompanyName,
-                    datoOriginal.ContactName,
-                    datoOriginal.ContactTitle,
-                    datoOriginal.Address,
-                    datoOriginal.City, 
-                    datoOriginal.Region,
-                    datoOriginal.PostalCode, 
-                    datoOriginal.Country,
-                    datoOriginal.Phone,
-                    datoOriginal.Fax
-                    );
-
+                /* var filas = adaptador.Update(
+                     datosModificados.CustomerID,
+                     datosModificados.CompanyName,
+                     datosModificados.ContactName, 
+                     datosModificados.ContactTitle, 
+                     datosModificados.Address,
+                     datosModificados.City,
+                     datosModificados.Region, 
+                     datosModificados.PostalCode,  
+                     datosModificados.Country, 
+                     datosModificados.Phone, 
+                     datosModificados.Fax, 
+                     datoOriginal.CustomerID, 
+                     datoOriginal.CompanyName,
+                     datoOriginal.ContactName,
+                     datoOriginal.ContactTitle,
+                     datoOriginal.Address,
+                     datoOriginal.City, 
+                     datoOriginal.Region,
+                     datoOriginal.PostalCode, 
+                     datoOriginal.Country,
+                     datoOriginal.Phone,
+                     datoOriginal.Fax
+                     );
+                */
+                /* var filas = adaptador.ActualizarCliente(datosModificados.CustomerID,
+                      datosModificados.CompanyName,
+                      datosModificados.ContactName,
+                      datosModificados.ContactTitle,
+                      datosModificados.Address,
+                      datosModificados.City,
+                      datosModificados.Region,
+                      datosModificados.PostalCode,
+                      datosModificados.Country,
+                      datosModificados.Phone,
+                      datosModificados.Fax, datoOriginal.CustomerID);
+                */
+                var filas = adaptador.Consulta1SoloObjeto(datosModificados.CustomerID,
+                      datosModificados.CompanyName,
+                      datosModificados.ContactName,
+                      datosModificados.ContactTitle,
+                      datosModificados.Address,
+                      datosModificados.City,
+                      datosModificados.Region,
+                      datosModificados.PostalCode,
+                      datosModificados.Country,
+                      datosModificados.Phone,
+                      datosModificados.Fax);
                 MessageBox.Show($"{filas} filas modificadas");
             }
 
