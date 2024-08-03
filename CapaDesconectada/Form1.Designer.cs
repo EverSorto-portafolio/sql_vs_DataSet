@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnActualizarNT = new System.Windows.Forms.Button();
             this.btBuscarPorIdNt = new System.Windows.Forms.Button();
             this.tboxObtenerNt = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,7 +53,7 @@
             this.tboxAddres = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btonInsertarCliente = new System.Windows.Forms.Button();
-            this.btnActualizarNT = new System.Windows.Forms.Button();
+            this.btnActucalizarT = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridNotipado)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -73,6 +74,16 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DataSet No Tipado";
+            // 
+            // btnActualizarNT
+            // 
+            this.btnActualizarNT.Location = new System.Drawing.Point(161, 418);
+            this.btnActualizarNT.Name = "btnActualizarNT";
+            this.btnActualizarNT.Size = new System.Drawing.Size(146, 35);
+            this.btnActualizarNT.TabIndex = 6;
+            this.btnActualizarNT.Text = "Actualizar";
+            this.btnActualizarNT.UseVisualStyleBackColor = true;
+            this.btnActualizarNT.Click += new System.EventHandler(this.btnActualizarNT_Click);
             // 
             // btBuscarPorIdNt
             // 
@@ -121,6 +132,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnActucalizarT);
             this.groupBox2.Controls.Add(this.btnInsertarT);
             this.groupBox2.Controls.Add(this.btnBuscarTipado);
             this.groupBox2.Controls.Add(this.tboxBuscarTipado);
@@ -136,7 +148,7 @@
             // 
             // btnInsertarT
             // 
-            this.btnInsertarT.Location = new System.Drawing.Point(223, 424);
+            this.btnInsertarT.Location = new System.Drawing.Point(42, 459);
             this.btnInsertarT.Name = "btnInsertarT";
             this.btnInsertarT.Size = new System.Drawing.Size(83, 35);
             this.btnInsertarT.TabIndex = 6;
@@ -279,15 +291,15 @@
             this.btonInsertarCliente.UseVisualStyleBackColor = true;
             this.btonInsertarCliente.Click += new System.EventHandler(this.btonInsertarCliente_Click);
             // 
-            // btnActualizarNT
+            // btnActucalizarT
             // 
-            this.btnActualizarNT.Location = new System.Drawing.Point(161, 418);
-            this.btnActualizarNT.Name = "btnActualizarNT";
-            this.btnActualizarNT.Size = new System.Drawing.Size(146, 35);
-            this.btnActualizarNT.TabIndex = 6;
-            this.btnActualizarNT.Text = "Actualizar";
-            this.btnActualizarNT.UseVisualStyleBackColor = true;
-            this.btnActualizarNT.Click += new System.EventHandler(this.btnActualizarNT_Click);
+            this.btnActucalizarT.Location = new System.Drawing.Point(182, 424);
+            this.btnActucalizarT.Name = "btnActucalizarT";
+            this.btnActucalizarT.Size = new System.Drawing.Size(83, 35);
+            this.btnActucalizarT.TabIndex = 9;
+            this.btnActucalizarT.Text = "Actualziar";
+            this.btnActucalizarT.UseVisualStyleBackColor = true;
+            this.btnActucalizarT.Click += new System.EventHandler(this.btnActucalizarT_Click);
             // 
             // Form1
             // 
@@ -347,6 +359,7 @@
         private System.Windows.Forms.Button btonInsertarCliente;
         private System.Windows.Forms.Button btnInsertarT;
         private System.Windows.Forms.Button btnActualizarNT;
+        private System.Windows.Forms.Button btnActucalizarT;
     }
 }
 

@@ -91,6 +91,7 @@ namespace CapaDesconectada
             
             if (customer != null) {
               var objeto1 =customerRepository.ExtraerInfoCliente(customer);
+                RellenarForm(objeto1);
                 Console.WriteLine(customer);
             }
         }
@@ -103,6 +104,45 @@ namespace CapaDesconectada
                 );
 
             MessageBox.Show($"{insertados} registros insertados");
+        }
+
+        private void btnActucalizarT_Click(object sender, EventArgs e)
+        {
+            var fila = adaptador.GetDataByCustomerID(tboxCustomerID.Text);
+           
+            if (fila != null) {
+                var datoOriginal = customerRepository.ExtraerInfoCliente(fila);
+                var datosModificados = CrearCliente();
+                var filas = adaptador.Update(
+                    datosModificados.CustomerID,
+                    datosModificados.CompanyName,
+                    datosModificados.ContactName, 
+                    datosModificados.ContactTitle, 
+                    datosModificados.Address,
+                    datosModificados.City,
+                    datosModificados.Region, 
+                    datosModificados.PostalCode,  
+                    datosModificados.Country, 
+                    datosModificados.Phone, 
+                    datosModificados.Fax, 
+                    datoOriginal.CustomerID, 
+                    datoOriginal.CompanyName,
+                    datoOriginal.ContactName,
+                    datoOriginal.ContactTitle,
+                    datoOriginal.Address,
+                    datoOriginal.City, 
+                    datoOriginal.Region,
+                    datoOriginal.PostalCode, 
+                    datoOriginal.Country,
+                    datoOriginal.Phone,
+                    datoOriginal.Fax
+                    );
+
+                MessageBox.Show($"{filas} filas modificadas");
+            }
+
+
+
         }
         #endregion
         public Form1()
@@ -120,6 +160,6 @@ namespace CapaDesconectada
 
         }
 
-   
+       
     }
 }
