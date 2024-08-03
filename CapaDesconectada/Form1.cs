@@ -75,7 +75,12 @@ namespace CapaDesconectada
             var actulaixadas = customerRepository.ActualizarCliente(cliente);
             MessageBox.Show($"{actulaixadas} filas actulizadas");
         }
+        private void btnEliminarClienteNt_Click(object sender, EventArgs e)
+        {
+            var eliminados = customerRepository.EliminarCliente(tboxCustomerID.Text);
+            MessageBox.Show($"{eliminados} filas eliminadas");
 
+        }
         #endregion
 
         #region tipado
@@ -163,9 +168,6 @@ namespace CapaDesconectada
                       datosModificados.Fax);
                 MessageBox.Show($"{filas} filas modificadas");
             }
-
-
-
         }
         #endregion
         public Form1()
@@ -183,6 +185,6 @@ namespace CapaDesconectada
 
         }
 
-       
+      
     }
 }
